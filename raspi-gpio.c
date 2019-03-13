@@ -629,9 +629,9 @@ int main(int argc, char *argv[])
     if(!hwbase)
       return 1;
 
-    if ((fd = open ("/dev/mem", O_RDWR | O_SYNC | O_CLOEXEC) ) < 0)
+    if ((fd = open ("/dev/vc-mem", O_RDWR | O_SYNC | O_CLOEXEC) ) < 0)
     {
-      printf("Unable to open /dev/mem: %s\n", strerror (errno)) ;
+      printf("Unable to open /dev/vc-mem: %s\n", strerror (errno)) ;
       return 1;
     }
 
